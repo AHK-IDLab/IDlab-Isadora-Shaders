@@ -19,15 +19,13 @@ https://github.com/neilmendoza/ofxPostProcessing
 
 These files are made to work with Isadora (https://troikatronix.com/) a node based real time media framework for live performance. To use these effects you will need to have Isadora installed.
 
-Then:
+* Download or clone this repository.
 
-Download or clone this repository.
+* Open Isadora and go to Help ->  Open Plugin Folder -> Troika Tronix GLSL Shaders
 
-Open Isadora and go to Help ->  Open Plugin Folder -> Troika Tronix GLSL Shaders
+* Copy the contents of the shader folder into the Troika Tronix GLSL Shaders folder
 
-Copy the contents of the shader folder into the Troika Tronix GLSL Shaders folder
-
-Restart Isadora
+* Restart Isadora
 
 Now you can open the example patches.
 
