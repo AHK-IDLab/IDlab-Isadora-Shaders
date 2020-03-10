@@ -1,0 +1,28 @@
+
+/*
+
+Pixelate shader - Fragment Shader
+
+
+Created for Isadora by Fred Rodrigues http://www.fredrodrigues.net/
+With the support of IDlab https://www.atd.ahk.nl/en/idlab/
+Downloaded from https://github.com/AHK-IDLab/IDlab-Isadora-Shaders
+
+*/
+
+uniform sampler2D tex0;
+
+uniform float xPixels;
+// ISADORA_FLOAT_PARAM(xPixels, xpxl, 0.0, 100, 10.0, "Columns");
+
+uniform float yPixels;
+// ISADORA_FLOAT_PARAM(yPixels, ypxl, 0.0, 100, 10.0, "Rows");
+
+
+
+
+void main(void) {
+
+	vec2 texCoords = vec2(floor(gl_TexCoord[0].s * xPixels) / xPixels, floor(gl_TexCoord[0].t * yPixels) / yPixels);
+    gl_FragColor = texture2D(tex0, texCoords);
+}
