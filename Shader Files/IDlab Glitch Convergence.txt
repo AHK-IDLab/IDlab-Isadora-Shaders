@@ -1,0 +1,35 @@
+/*
+
+Convergence - Fragment Shader
+
+
+Created for Isadora by Fred Rodrigues http://www.fredrodrigues.net/
+With the support of IDlab https://www.atd.ahk.nl/en/idlab/
+Downloaded from https://github.com/AHK-IDLab/IDlab-Isadora-Shaders
+
+*/
+
+uniform sampler2D tex0;
+
+uniform float convergence;
+// ISADORA_FLOAT_PARAM(convergence, conv, 0.0, 1.0, 0.0, "Amount of convergence");
+
+
+void main()
+{
+    vec4 color = texture2D(tex0, gl_TexCoord[0].xy);
+    
+    vec4 col_r = texture2D(tex0, gl_TexCoord[0].xy + vec2(-35.0*convergence,0));
+    
+    vec4 col_l = texture2D(tex0, gl_TexCoord[0].xy + vec2(35.0*convergence,0));
+    
+    vec4 col_g = texture2D(tex0, gl_TexCoord[0].xy + vec2( -7.5*convergence,0));
+    
+    color.b = color.b + col_r.b*max(1.0,sin(gl_TexCoord[0].y*1.2)*2.5)*convergence;
+    color.r = color.r + col_l.r*max(1.0,sin(gl_TexCoord[0].y*1.2)*2.5)*convergence;
+    color.g = color.g + col_g.g*max(1.0,sin(gl_TexCoord[0].y*1.2)*2.5)*convergence;
+    
+    gl_FragColor = color;
+}
+
+

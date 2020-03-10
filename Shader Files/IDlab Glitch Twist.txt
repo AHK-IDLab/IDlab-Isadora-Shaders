@@ -1,0 +1,35 @@
+
+/*
+
+Twist shader - Fragment Shader
+
+
+Created for Isadora by Fred Rodrigues http://www.fredrodrigues.net/
+With the support of IDlab https://www.atd.ahk.nl/en/idlab/
+Downloaded from https://github.com/AHK-IDLab/IDlab-Isadora-Shaders
+
+*/
+
+uniform sampler2D tex0;
+
+uniform float twistX;
+// ISADORA_FLOAT_PARAM(twistX, twsx, 0.0, 5.0, 1.0, "X offset for twist Factor");
+
+uniform float twistY;
+// ISADORA_FLOAT_PARAM(twistY, twsy, 0.0, 5.0, 1.0, "Y offset for twist Factor");
+
+
+float pix_w,pix_h;
+
+void main(void) {
+
+    vec2 texCoord = vec2(gl_TexCoord[0].x + sin(gl_TexCoord[0].y/twistX), gl_TexCoord[0].y + cos(gl_TexCoord[0].x/twistY));
+
+
+
+    vec4 col = texture2D(tex0,texCoord);
+
+    gl_FragColor.rgba = col.rgba;
+    
+}
+

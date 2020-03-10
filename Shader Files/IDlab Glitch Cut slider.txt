@@ -1,0 +1,36 @@
+/*
+
+Cut Slider - Fragment Shader
+
+
+Created for Isadora by Fred Rodrigues http://www.fredrodrigues.net/
+With the support of IDlab https://www.atd.ahk.nl/en/idlab/
+Downloaded from https://github.com/AHK-IDLab/IDlab-Isadora-Shaders
+
+*/
+
+uniform sampler2D tex0;
+
+uniform float amount;
+// ISADORA_FLOAT_PARAM(amount, amt, 0.0, 1.0, 0.0, "Amount of cutting and sliding");
+
+uniform float offset;
+// ISADORA_FLOAT_PARAM(offset, Xoff, 0.001, 0.3, 0.004, "Offset for cutting and sliding");
+
+
+
+// this is how we receive the texture
+
+
+void main()
+{
+	vec2 texCoord = vec2(gl_TexCoord[0].x, gl_TexCoord[0].y);
+    vec4 color = texture2D(tex0, gl_TexCoord[0].xy);
+    
+    
+    vec4 col_s = texture2D(tex0, texCoord + vec2(floor(sin(texCoord.y/offset*amount+amount*amount))*offset*amount,0));
+    
+    gl_FragColor = col_s;
+}
+
+
