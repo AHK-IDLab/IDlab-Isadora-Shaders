@@ -1,4 +1,4 @@
-# IDLAB-Isadora-Shaders
+# IDlab-Isadora-Shaders
 A collection of GLSL actors for Isadora made by [Frederick Rodrigues](http://www.fredrodrigues.net/) in residency at IDlab at the AHK Amsterdam
 
 
