@@ -39,5 +39,6 @@ The "IDLAB Shader Examples Live video.izz" uses a live video input, you will nee
 If your webcam or video input is configured correctly the effects will process the live video input.
 
 Please post videos or pictures of what you do with this to the Isadora forum thread:
+https://community.troikatronix.com/topic/6474/some-new-glsl-effects
 
 Have fun!
