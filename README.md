@@ -1,13 +1,13 @@
 # IDLAB-Isadora-Shaders
-A collection of GLSL actors for Isadora made by Frederick Rodrigues in residency at IDLAB at the AHK Amsterdam
+A collection of GLSL actors for Isadora made by [Frederick Rodrigues](http://www.fredrodrigues.net/) in residency at IDlab at the AHK Amsterdam
 
 
-# Idlab
-Idlab is the Interdisciplinary Digital Laboratory situated at the Academy of Theatre and Dance AHK Amsterdam.
+# IDlab
+IDlab is the Interdisciplinary Digital Laboratory situated at the Academy of Theatre and Dance AHK Amsterdam.
 
 https://www.atd.ahk.nl/en/idlab/
 
-The Idlab has supported the creation of these effects through its Artist In Residency program in March 2020.
+The IDlab has supported the creation of these effects through its Artist In Residency program in March 2020.
 
 The code in these effects was adapted from 2 main sources:
 https://github.com/maxillacult/ofxPostGlitch
