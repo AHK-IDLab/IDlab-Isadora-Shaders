@@ -34,7 +34,8 @@ There are 2 example files:
 The "IDLAB Shader Examples still image.izz" patch uses a still image to show how the effects work.
  
 
-The "IDLAB Shader Examples Live video.izz" one uses a live video input, you will need to configure your camera in the capture settings and then hit start capture.
+The "IDLAB Shader Examples Live video.izz" uses a live video input, you will need to configure your camera in the capture settings and then hit start capture.
+
 If your webcam or video input is configured correctly the effects will process the live video input.
 
 Please post videos or pictures of what you do with this to the Isadora forum thread:
